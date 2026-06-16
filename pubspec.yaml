@@ -1,0 +1,65 @@
+name: shalalink
+description: School Management & Parent Portal
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.10.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Firebase
+  firebase_core: ^3.6.0
+  firebase_auth: ^5.3.1
+  cloud_firestore: ^5.4.4
+  firebase_storage: ^12.3.2
+  firebase_messaging: ^15.1.3
+  firebase_app_check: ^0.3.1+9
+  flutter_local_notifications: ^18.0.1
+
+  # State Management
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+
+  # Navigation
+  go_router: ^14.2.7
+
+  # Models
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
+  # UI
+  cached_network_image: ^3.4.1
+  image_picker: ^1.1.2
+  file_picker: ^8.1.2
+  timeago: ^3.7.0
+  intl: ^0.19.0
+
+  url_launcher: ^6.3.0
+  pdf: ^3.11.0
+  printing: ^5.13.1
+
+  # Utils
+  uuid: ^4.5.1
+  shared_preferences: ^2.3.2
+
+  # Monitoring
+  sentry_flutter: ^8.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  build_runner: ^2.4.12
+  freezed: ^2.5.7
+  json_serializable: ^6.8.0
+  riverpod_generator: ^2.4.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/school_config.json

@@ -1,0 +1,55 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // ── Student documents ──────────────────────────────────────────────────────
+    // Authenticated users (admin / staff) can upload and read documents.
+    match /student_documents/{studentId}/{filename} {
+      allow read:  if request.auth != null;
+      allow write: if request.auth != null
+                   && request.resource.size < 20 * 1024 * 1024; // 20 MB limit
+    }
+
+    // ── Student photos ─────────────────────────────────────────────────────────
+    match /student_photos/{allPaths=**} {
+      allow read:  if request.auth != null;
+      allow write: if request.auth != null
+                   && request.resource.size < 5 * 1024 * 1024;  // 5 MB limit
+    }
+
+    // ── Fee receipts ───────────────────────────────────────────────────────────
+    match /fee_receipts/{allPaths=**} {
+      allow read:  if request.auth != null;
+      allow write: if request.auth != null
+                   && request.resource.size < 10 * 1024 * 1024; // 10 MB limit
+    }
+
+    // ── School symbols / logos ─────────────────────────────────────────────────
+    match /school_symbols/{allPaths=**} {
+      allow read:  if true;                                       // public logos
+      allow write: if request.auth != null
+                   && request.resource.size < 5 * 1024 * 1024;  // 5 MB limit
+    }
+
+    // ── Lesson plan attachments ────────────────────────────────────────────────
+    match /lessonPlans/{schoolId}/{filename} {
+      allow read:  if request.auth != null;
+      allow write: if request.auth != null
+                   && request.resource.size < 20 * 1024 * 1024; // 20 MB limit
+    }
+
+    // ── Study materials (notes, question banks, worksheets, etc.) ─────────────
+    match /studyMaterials/{schoolId}/{filename} {
+      allow read:  if request.auth != null;
+      allow write: if request.auth != null
+                   && request.resource.size < 20 * 1024 * 1024; // 20 MB limit
+    }
+
+    // ── School gallery images ──────────────────────────────────────────────────
+    match /gallery/{schoolId}/{filename} {
+      allow read:  if request.auth != null;
+      allow write: if request.auth != null
+                   && request.resource.size < 10 * 1024 * 1024; // 10 MB limit
+    }
+  }
+}

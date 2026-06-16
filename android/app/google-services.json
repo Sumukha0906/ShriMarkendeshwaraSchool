@@ -1,0 +1,52 @@
+{
+  "project_info": {
+    "project_number": "1026624818994",
+    "project_id": "school-management-applic-42008",
+    "storage_bucket": "school-management-applic-42008.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026624818994:android:33910095486e4f16ed112b",
+        "android_client_info": {
+          "package_name": "com.educonnect.educonnect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB345hSBBTa8gtpWAwyqfi7qI7qO_M5hAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026624818994:android:873d4440ee1ba04eed112b",
+        "android_client_info": {
+          "package_name": "com.shrimarkandeshwara.school"
+        }
+      },
+      "certificate_hash": [
+        "63d20cfee141cc4bdee6ccdcbee668a8132bd37f",
+        "82aea91b61570c04c2d7bf31a0d64189d6e1295f09f2770d88560ccda2c42930"
+      ],
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB345hSBBTa8gtpWAwyqfi7qI7qO_M5hAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

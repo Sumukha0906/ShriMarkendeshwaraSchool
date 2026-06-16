@@ -1,0 +1,42 @@
+{
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "functions": [
+    {
+      "codebase": "default",
+      "source": "functions",
+      "runtime": "nodejs20",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ]
+    }
+  ],
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "school-management-applic-42008",
+          "appId": "1:1026624818994:android:33910095486e4f16ed112b",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "school-management-applic-42008",
+          "configurations": {
+            "android": "1:1026624818994:android:33910095486e4f16ed112b",
+            "ios": "1:1026624818994:ios:9a7568dac9cfaa82ed112b",
+            "macos": "1:1026624818994:ios:9a7568dac9cfaa82ed112b",
+            "web": "1:1026624818994:web:99afa2a5e182fc72ed112b",
+            "windows": "1:1026624818994:web:fecae7417d93e0efed112b"
+          }
+        }
+      }
+    }
+  }
+}
