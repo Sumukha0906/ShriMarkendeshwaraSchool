@@ -15,7 +15,6 @@ import 'early_pickup_screen.dart';
 import 'parent_lesson_screen.dart';
 import 'parent_timetable_screen.dart';
 import 'announcements_screen.dart';
-import 'fee_payment_screen.dart';
 
 class ParentHomeTab extends ConsumerWidget {
   final Student student;
@@ -749,25 +748,6 @@ class _FeeStatusCard extends ConsumerWidget {
                       ),
                     ),
                   ],
-                ),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => FeePaymentScreen(student: student))),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 14, vertical: 8),
-                  decoration: BoxDecoration(
-                    color: kParentAmber,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: const Text(
-                    'Pay Now',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 12,
-                    ),
-                  ),
                 ),
               ),
             ],

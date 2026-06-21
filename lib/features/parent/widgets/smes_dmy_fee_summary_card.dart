@@ -6,14 +6,11 @@ class SmesFeeSummaryCard extends StatelessWidget {
   final double totalFee;
   final double amountPaid;
   final String academicYear;
-  final VoidCallback? onPayTap;
-
   const SmesFeeSummaryCard({
     super.key,
     required this.totalFee,
     required this.amountPaid,
     required this.academicYear,
-    this.onPayTap,
   });
 
   double get _pending => (totalFee - amountPaid).clamp(0, double.infinity);
@@ -92,22 +89,6 @@ class SmesFeeSummaryCard extends StatelessWidget {
                   style: TextStyle(fontSize: 12, color: isPaid ? Colors.grey : amber, fontWeight: FontWeight.w600)),
             ],
           ),
-          if (!isPaid && onPayTap != null) ...[
-            const SizedBox(height: 12),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: onPayTap,
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: primary,
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                ),
-                child: const Text('Pay Now', style: TextStyle(fontWeight: FontWeight.w700)),
-              ),
-            ),
-          ],
         ],
       ),
     );
